@@ -4,3 +4,11 @@ export type UserData = {
   joined: number
   email: string
 }
+
+export type NoteData = {
+  date: string
+  emoji: string
+  note: string
+  created: number
+  complete: boolean
+}

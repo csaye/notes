@@ -37,3 +37,25 @@ h6,
 p {
   margin: 0;
 }
+
+.textButton {
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #fff;
+  background: #2196f3;
+  border: 0;
+  border-radius: 8px;
+
+  &:hover {
+    background: #2183f3;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    background: #666;
+    cursor: not-allowed;
+  }
+}
