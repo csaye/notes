@@ -14,7 +14,7 @@ export default function Index() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Notes</h1>
+        <h1>Todos</h1>
         <p>
           Signed in as <u>{auth.currentUser.email}</u>
         </p>

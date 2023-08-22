@@ -5,7 +5,7 @@ export type UserData = {
   email: string
 }
 
-export type NoteData = {
+export type TodoData = {
   emoji: string
   note: string
   created: number

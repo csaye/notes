@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from '../styles/components/NoteForm.module.scss'
 import { collection, doc, getFirestore, setDoc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
-import { NoteData } from '@/utils/types'
+import { TodoData as TodoData } from '@/utils/types'
 
 export default function NoteForm() {
   const [loading, setLoading] = useState(false)
@@ -49,14 +49,14 @@ export default function NoteForm() {
 
     setLoading(true)
 
-    const notesRef = collection(db, 'users', uid, 'notes')
-    const noteRef = doc(notesRef)
-    await setDoc(noteRef, {
+    const todosRef = collection(db, 'users', uid, 'todos')
+    const todoRef = doc(todosRef)
+    await setDoc(todoRef, {
       emoji,
       note,
       created: Date.now(),
-      id: noteRef.id,
-    } satisfies NoteData)
+      id: todoRef.id,
+    } satisfies TodoData)
 
     setEmoji('')
     setNote('')

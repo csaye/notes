@@ -17,7 +17,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Notes</title>
+        <title>Todos</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Component {...pageProps} />

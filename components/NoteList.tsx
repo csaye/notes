@@ -1,17 +1,17 @@
 import styles from '../styles/components/NoteList.module.scss'
-import { useNotes } from '@/hooks/useNotes'
+import { useTodos } from '@/hooks/useTodos'
 import Note from './Note'
 
 export default function NoteList() {
-  const notes = useNotes()
+  const todos = useTodos()
 
-  if (!notes) {
+  if (!todos) {
     return <p>Loading...</p>
   }
 
   return (
     <div className={styles.container}>
-      {notes.map((note) => (
+      {todos.map((note) => (
         <Note {...note} key={note.id} />
       ))}
     </div>

@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <div className={styles.container}>
       <div className={styles.center}>
-        <h1>Notes</h1>
+        <h1>Todos</h1>
         <button className='textButton' onClick={() => signInWithGoogle()}>
           Sign in with Google
         </button>
