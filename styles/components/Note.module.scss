@@ -1,0 +1,11 @@
+.container {
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  background: #efefef;
+  padding: 8px;
+
+  > p {
+    flex-grow: 1;
+  }
+}
