@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import styles from '../styles/components/NoteForm.module.scss'
+import styles from '../styles/components/TodoForm.module.scss'
 import { collection, doc, getFirestore, setDoc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 import { TodoData as TodoData } from '@/utils/types'
 
-export default function NoteForm() {
+export default function TodoForm() {
   const [loading, setLoading] = useState(false)
   const [emoji, setEmoji] = useState('')
   const [note, setNote] = useState('')
@@ -17,7 +17,7 @@ export default function NoteForm() {
       className={styles.container}
       onSubmit={(e) => {
         e.preventDefault()
-        createNote()
+        createTodo()
       }}
     >
       <div className={styles.note}>
@@ -36,15 +36,15 @@ export default function NoteForm() {
         />
       </div>
       <button className='textButton' disabled={loading}>
-        Create Note
+        Create Todo
       </button>
     </form>
   )
 
-  async function createNote() {
+  async function createTodo() {
     const { uid } = auth.currentUser ?? {}
     if (!uid) {
-      throw new Error('Creating note with no user')
+      throw new Error('Creating todo with no user')
     }
 
     setLoading(true)

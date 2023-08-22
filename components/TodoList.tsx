@@ -1,8 +1,8 @@
-import styles from '../styles/components/NoteList.module.scss'
+import styles from '../styles/components/TodoList.module.scss'
 import { useTodos } from '@/hooks/useTodos'
-import Note from './Note'
+import Todo from './Todo'
 
-export default function NoteList() {
+export default function TodoList() {
   const todos = useTodos()
 
   if (!todos) {
@@ -11,8 +11,8 @@ export default function NoteList() {
 
   return (
     <div className={styles.container}>
-      {todos.map((note) => (
-        <Note {...note} key={note.id} />
+      {todos.map((todo) => (
+        <Todo {...todo} key={todo.id} />
       ))}
     </div>
   )

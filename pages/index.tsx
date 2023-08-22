@@ -1,6 +1,6 @@
 import Login from '@/components/Login'
-import NoteForm from '@/components/NoteForm'
-import NoteList from '@/components/NoteList'
+import TodoForm from '@/components/TodoForm'
+import TodoList from '@/components/TodoList'
 import styles from '@/styles/pages/Index.module.scss'
 import { getAuth, signOut } from 'firebase/auth'
 
@@ -22,8 +22,8 @@ export default function Index() {
           Sign Out
         </button>
       </div>
-      <NoteForm />
-      <NoteList />
+      <TodoForm />
+      <TodoList />
     </div>
   )
 }
