@@ -9,10 +9,8 @@ export default function Todo({ emoji, note, id }: TodoData) {
 
   return (
     <div className={styles.container}>
-      <p>
-        {emoji} {note}
-      </p>
-      <button onClick={() => deleteTodo()}>x</button>
+      <p>{emoji} {note}</p>
+      <button onClick={() => deleteTodo()}>&times;</button>
     </div>
   )
 
