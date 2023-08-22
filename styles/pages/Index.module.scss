@@ -11,40 +11,4 @@
       flex-grow: 1;
     }
   }
-
-  > form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-
-    input {
-      border: 1px solid #666;
-      border-radius: 8px;
-    }
-
-    > .dateField {
-      padding: 8px;
-    }
-
-    > .note {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-
-      > .emojiField {
-        width: 32px;
-        height: 32px;
-        text-align: center;
-        font-size: 24px;
-      }
-
-      > .noteField {
-        height: 32px;
-        padding: 0 8px;
-        font-size: 16px;
-        width: 250px;
-      }
-    }
-  }
 }

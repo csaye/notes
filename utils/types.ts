@@ -6,9 +6,8 @@ export type UserData = {
 }
 
 export type NoteData = {
-  date: string
   emoji: string
   note: string
   created: number
-  complete: boolean
+  id: string
 }
