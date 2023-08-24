@@ -35,7 +35,7 @@ export default function TodoForm() {
           required
         />
       </div>
-      <button className='textButton' disabled={loading}>
+      <button className='textButton' disabled={!auth.currentUser || loading}>
         Create Todo
       </button>
     </form>
