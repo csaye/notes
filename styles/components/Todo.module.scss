@@ -6,6 +6,11 @@
   background: #efefef;
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
+
+  &.priority {
+    background: #f2f283;
+  }
 
   > p {
     flex-grow: 1;

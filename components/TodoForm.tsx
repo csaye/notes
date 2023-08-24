@@ -56,6 +56,7 @@ export default function TodoForm() {
       note,
       created: Date.now(),
       id: todoRef.id,
+      priority: false,
     } satisfies TodoData)
 
     setEmoji('')
