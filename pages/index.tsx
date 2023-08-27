@@ -21,10 +21,12 @@ export default function Index() {
           <button className='textButton' onClick={() => signInWithGoogle()}>
             Sign In
           </button>
-        ) : null}
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
       <TodoForm />
-      {auth.currentUser && <TodoList />}
+      <TodoList />
     </div>
   )
 }

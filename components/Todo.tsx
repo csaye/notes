@@ -14,7 +14,7 @@ export default function Todo(props: TodoData) {
 
   const { uid } = auth.currentUser ?? {}
   if (!uid) {
-    throw new Error('Todo with no user')
+    return null
   }
   const todoRef = doc(db, 'users', uid, 'todos', id)
 
