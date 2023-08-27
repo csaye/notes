@@ -6,7 +6,6 @@ export type UserData = {
 }
 
 export type TodoData = {
-  emoji: string
   note: string
   created: number
   id: string

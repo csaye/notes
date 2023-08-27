@@ -5,7 +5,7 @@ import { deleteDoc, doc, getFirestore, updateDoc } from 'firebase/firestore'
 import { useState } from 'react'
 
 export default function Todo(props: TodoData) {
-  const { emoji, note, id } = props
+  const { note, id } = props
 
   const auth = getAuth()
   const db = getFirestore()
@@ -25,9 +25,7 @@ export default function Todo(props: TodoData) {
       }
       onClick={() => togglePriority()}
     >
-      <p>
-        {emoji} {note}
-      </p>
+      <p>{note}</p>
       <button
         onClick={(e) => {
           e.stopPropagation()
