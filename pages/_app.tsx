@@ -12,8 +12,6 @@ if (!getApps().length) {
 export default function App(props: AppProps) {
   const { Component, pageProps } = props
 
-  useCurrentUser()
-
   return (
     <>
       <Head>
