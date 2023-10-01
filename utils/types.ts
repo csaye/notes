@@ -9,5 +9,5 @@ export type TodoData = {
   note: string
   created: number
   id: string
-  priority: boolean
+  priority: number
 }

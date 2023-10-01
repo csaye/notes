@@ -20,10 +20,18 @@ export default function Todo(props: TodoData) {
 
   return (
     <div
-      className={
-        priority ? `${styles.container} ${styles.priority}` : styles.container
-      }
-      onClick={() => togglePriority()}
+      className={`${styles.container} ${
+        priority === 2
+          ? styles.priority
+          : priority === 0
+          ? styles.nopriority
+          : ''
+      }`}
+      onClick={() => updatePriority(priority === 2 ? 1 : 2)}
+      onContextMenu={(e) => {
+        e.preventDefault()
+        updatePriority(priority === 0 ? 1 : 0)
+      }}
     >
       <p>{note}</p>
       <button
@@ -37,9 +45,9 @@ export default function Todo(props: TodoData) {
     </div>
   )
 
-  async function togglePriority() {
-    setPriority(!priority)
-    await updateDoc(todoRef, { priority: !priority })
+  async function updatePriority(level: number) {
+    setPriority(level)
+    await updateDoc(todoRef, { priority: level })
   }
 
   async function deleteTodo() {

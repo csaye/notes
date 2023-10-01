@@ -12,6 +12,10 @@
     background: #f2f283;
   }
 
+  &.nopriority {
+    opacity: 0.2;
+  }
+
   > p {
     flex-grow: 1;
     padding: 0 8px;

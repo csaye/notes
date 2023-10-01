@@ -45,7 +45,7 @@ export default function TodoForm() {
       note,
       created: Date.now(),
       id: todoRef.id,
-      priority: false,
+      priority: 1,
     } satisfies TodoData)
 
     setNote('')
