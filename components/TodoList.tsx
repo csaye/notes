@@ -13,6 +13,8 @@ export default function TodoList() {
     <div className={styles.container}>
       {!todos ? (
         <p>Loading...</p>
+      ) : !todos.length ? (
+        <p>Nothing to do!</p>
       ) : (
         todos.map((todo) => <Todo {...todo} key={todo.id} />)
       )}
